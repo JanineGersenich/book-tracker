@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>BookTracker</RootNamespace>
+    <AssemblyName>BookTracker</AssemblyName>
+
+	<!--
+      NU1903: SQLitePCLRaw.lib.e_sqlite3 wird transitiv über Microsoft.EntityFrameworkCore.Sqlite
+      eingebunden und ist als sicherheitsrelevant markiert (GHSA-2m69-gcr7-jv3q). Es existiert
+      aktuell (Stand Recherche) keine gepatchte Version - betrifft auch die neueste EF-Core-Version
+      unter .NET 10 (siehe dotnet/efcore#38257 und #38463). Für eine lokale Single-User-Desktop-App
+      ohne Netzwerkzugriff auf die Datenbank ist das reale Risiko gering. Bewusst unterdrückt statt
+      stillschweigend im Build-Log zu verschwinden - bei einer verfügbaren gepatchten Version sollte
+      diese Zeile entfernt und das Paket aktualisiert werden.
+    -->
+	<NoWarn>NU1903</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

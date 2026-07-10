@@ -1,0 +1,19 @@
+## .NET / Visual Studio
+bin/
+obj/
+*.user
+.vs/
+*.suo
+
+## Rider / VS Code
+.idea/
+.vscode/
+
+## SQLite Datenbank (lokale Nutzdaten gehören nicht ins Repo)
+*.db
+*.db-shm
+*.db-wal
+
+## OS
+.DS_Store
+Thumbs.db
