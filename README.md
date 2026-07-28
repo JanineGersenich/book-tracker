@@ -16,6 +16,8 @@ Bereits umgesetzt:
 
 \- Datenbankanbindung mit Entity Framework Core / SQLite
 
+\- Datenzugriffsschicht für CRUD-Operationen
+
 
 
 Als Nächstes:
