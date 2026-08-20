@@ -18,11 +18,11 @@ Bereits umgesetzt:
 
 \- Datenzugriffsschicht für CRUD-Operationen
 
+\- Bibliotheksansicht mit Suche und Filtern
+
 
 
 Als Nächstes:
-
-\- Bibliotheksansicht mit Suche und Filtern
 
 \- Bearbeiten-Dialog
 
